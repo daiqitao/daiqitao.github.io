@@ -20,7 +20,7 @@
     border: none;
     padding: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
-    width: 480px;
+    width: 500px;
     height: 150px;
     display: inline-block;
     letter-spacing: normal;
@@ -36,7 +36,7 @@
     padding: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
     width: 450px;
-    height: 200px;
+    height: 300px;
     display: inline-block;
     letter-spacing: normal;
     line-height: normal;
@@ -84,6 +84,15 @@ a {
         cursor: pointer;
         text-decoration: none;
     }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
 
 h1 span {
     top: 20px; 
