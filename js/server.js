@@ -4,7 +4,7 @@ window.onkeydown = window.onkeyup = window.onkeypress = function (event) {
   if (event.keyCode == 123) {
   event.preventDefault(); // 阻止默认事件行为
   window.event.returnValue = false;
-  alert('官方已禁用F12')
+  alert('已禁用F12')
   }
 }
 
@@ -12,7 +12,7 @@ window.onkeydown = window.onkeyup = window.onkeypress = function (event) {
 document.oncontextmenu = function (event){
   if(window.event){
   event = window.event;
-  alert('官方已禁用右键检查，若要刷新请按网站上方的刷新按钮')
+  alert('已禁用右键检查，若要刷新请按网站上方的刷新按钮')
   }
   try{
   var the = event.srcElement;
@@ -29,5 +29,5 @@ document.oncontextmenu = function (event){
 
 if (window.location.href.indexOf("view-source:") > -1) {
   window.location.href = "http://example.com/no-view-source.html";
-  alert('官方已禁止查看源码')
+  alert('已禁止查看源码')
 }
