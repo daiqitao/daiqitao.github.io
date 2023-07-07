@@ -1,4 +1,4 @@
-.A-Card-Box-Small {
+.A-Card-Box {
     background-color:rgba(0, 0, 0, 0.5);
     color: #FFF;
     border-radius: 10px;
@@ -13,7 +13,7 @@
     margin: 8px;
 }
 
-.B-Card-Box-Small {
+.B-Card-Box {
     background-color:rgba(0, 0, 0, 0.5);
     color: #FFF;
     border-radius: 10px;
@@ -28,7 +28,7 @@
     margin: 8px;
 }
 
-.C-Card-Box-Small {
+.C-Card-Box {
     background-color:rgba(0, 0, 0, 0.5);
     color: #FFF;
     border-radius: 10px;
@@ -43,7 +43,7 @@
     margin: 8px;
 }
 
-.D-Card-Box-Small {
+.D-Card-Box {
     background-color:rgba(0, 0, 0, 0.5);
     color: #FFF;
     border-radius: 10px;
@@ -58,7 +58,7 @@
     margin: 8px;
 }
 
-.PeopleCard-Image-Small {
+.PeopleCard-Img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
