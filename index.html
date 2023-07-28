@@ -1,0 +1,468 @@
+<html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>DAIQITAO的个人主页</title>
+   <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，TAO的网站，银河编程社区">
+   <link type="text/css" rel="stylesheet" href="/css/main.css"/>
+   <script src="/js/yiyan.js"></script>
+   <link rel="shortcut icon" href="/img/logo.ico">
+  <style>
+           .subpage {
+            display: none; /* 默认隐藏所有子页面 */
+        }
+
+             .btn {
+            --bs-btn-padding-x: 0.75rem;
+            --bs-btn-padding-y: 0.325rem;
+            --bs-btn-font-family: ;
+            --bs-btn-font-size: 1rem;
+            --bs-btn-font-weight: 400;
+            --bs-btn-line-height: 1.5;
+            --bs-btn-color: #212529;
+            --bs-btn-bg: transparent;
+            --bs-btn-border-width: 1px;
+            --bs-btn-border-color: transparent;
+            --bs-btn-border-radius: 0.375rem;
+            --bs-btn-hover-border-color: transparent;
+            --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+            --bs-btn-disabled-opacity: 0.65;
+            --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+            display: inline-block;
+            padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+            font-family: var(--bs-btn-font-family);
+            font-size: var(--bs-btn-font-size);
+            font-weight: var(--bs-btn-font-weight);
+            line-height: var(--bs-btn-line-height);
+            color: var(--bs-btn-color);
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+            border-radius: var(--bs-btn-border-radius);
+            background-color: var(--bs-btn-bg);
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .btn {
+              transition: none;
+            }
+          }
+          .btn:hover {
+            color: var(--bs-btn-hover-color);
+            background-color: var(--bs-btn-hover-bg);
+            border-color: var(--bs-btn-hover-border-color);
+          }
+          .btn-check + .btn:hover {
+            color: var(--bs-btn-color);
+            background-color: var(--bs-btn-bg);
+            border-color: var(--bs-btn-border-color);
+          }
+          .btn:focus-visible {
+            color: var(--bs-btn-hover-color);
+            background-color: var(--bs-btn-hover-bg);
+            border-color: var(--bs-btn-hover-border-color);
+            outline: 0;
+            box-shadow: var(--bs-btn-focus-box-shadow);
+          }
+          .btn-check:focus-visible + .btn {
+            border-color: var(--bs-btn-hover-border-color);
+            outline: 0;
+            box-shadow: var(--bs-btn-focus-box-shadow);
+          }
+          .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+            color: var(--bs-btn-active-color);
+            background-color: var(--bs-btn-active-bg);
+            border-color: var(--bs-btn-active-border-color);
+          }
+          .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+            box-shadow: var(--bs-btn-focus-box-shadow);
+          }
+
+             .btn-outline-primary {
+            --bs-btn-color:black;
+            --bs-btn-border-color: black;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: black;
+            --bs-btn-hover-border-color:darkgray;
+            --bs-btn-focus-shadow-rgb: 248, 249, 250;
+            --bs-btn-active-color: #000;
+            --bs-btn-active-bg: black;
+            --bs-btn-active-border-color: black;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: darkgray;
+            --bs-btn-disabled-bg: transparent;
+            --bs-btn-disabled-border-color: black;
+            --bs-gradient: none;
+          }
+
+.Card-Box {
+    background-color:rgba(225,225,225,0.3);
+    color: #FFF;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    width: 600px;
+    height: 300px;
+    display: inline-block;
+    letter-spacing: normal;
+    line-height: normal;
+    margin: 8px;
+}
+
+.Card-Img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+li {
+    list-style: none;
+}
+
+h1 span {
+    top: 20px; 
+    position: relative;
+    animation: loading 0.3s ease 0s infinite alternate; 
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 1px 0  #CCC,
+                0 2px 0 #CCC,
+                0 3px 0 #CCC,
+                0 4px 0 #CCC,
+                0 5px 0 #CCC,
+                0 6px 0 #CCC,
+                0 7px 0 #CCC,
+                0 8px 0 #CCC,
+                0 9px 0 #CCC,
+                0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 span:nth-child(2) { 
+    animation-delay: 0.1s; 
+}
+h1 span:nth-child(3) { 
+    animation-delay: 0.2s; 
+}
+h1 span:nth-child(4) { 
+    animation-delay: 0.3s; 
+}
+h1 span:nth-child(5) { 
+    animation-delay: 0.4s; 
+}
+h1 span:nth-child(6) { 
+    animation-delay: 0.5s; 
+}
+h1 span:nth-child(7) { 
+    animation-delay: 0.6s; 
+}
+h1 span:nth-child(8) { 
+    animation-delay: 0.7s; 
+}
+
+@keyframes loading { 
+    100% {
+        top: -20px;  
+        text-shadow: 0 1px 0 #CCC,
+             0 2px 0 #CCC,
+             0 3px 0 #CCC,
+             0 4px 0 #CCC,
+             0 5px 0 #CCC,
+             0 6px 0 #CCC,
+             0 7px 0 #CCC,
+             0 8px 0 #CCC,
+             0 9px 0 #CCC,
+             0 50px 25px rgba(0, 0, 0, 0.3);     
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wave{
+    /* 弹性布局 */
+    display: flex;
+    /* 设置投影 */
+    filter: drop-shadow(120px 0 0 rgba(149,191,218,0.5));
+    bottom: 0;
+}
+.wave div{
+    position: relative;
+    width: 40px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.wave div::before{
+    content: "";
+    width: 300%;
+    height: 100%;
+    background-color: rgba(149,191,218,1);
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    /* 执行动画：动画名 时长 贝塞尔曲线 无限播放 来回轮流播放 */
+    animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate, wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
+    /* 通过var函数调用自定义属性--d1、--d2，设置动画延迟 */
+    animation-delay: var(--d1), var(--d2);
+}
+
+/* 定义动画 */
+@keyframes upDown {
+    0%{
+        top: 70%;
+    }
+    100%{
+        top: 30%;
+    }
+}
+@keyframes wave {
+    0%{
+        transform: rotateZ(-20deg);
+    }
+    100%{
+        transform: rotateZ(20deg);
+    }
+}
+
+        body {
+            background-image: url(/img/background_1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        @font-face {
+            font-family: "Nfonts";
+            src: url(./fonts/思源黑体.otf);
+        }
+
+        .label {
+            background-color: white;
+            color: black;
+            padding: 2px 5px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        hr {
+            border: none;
+            background: none;
+            background-color: white;
+            height: 3px;
+            width: 20%;
+        }
+
+        .projectbox.container {
+            width: 250px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        .projectbox.facer {
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .projectbox.content {
+            margin-top: -5px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 12px;
+            border-radius: 0px 0px 15px 15px;
+        }
+
+        .projectbox.content-title {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .projectbox.content-text {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: gray;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        a {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+  <center>
+    <img class="Card-Img" src="/img/头像.jpg">
+    <h1>
+        <span>D</span>
+        <span>A</span>
+        <span>I</span>
+        <span>Q</span>
+        <span>I</span>
+        <span>T</span>
+        <span>A</span>
+        <span>O</span>
+    </h1>
+  <span id="yiyan"></span><br>
+ <hr><br>
+   <h3 style="color:#FFF;">我是DAIQITAO，欢迎来到我的主页！</h3>
+   <p style="color:#FFF;">哪位好心人可以V我50（）</p>
+     <img src="/img/收款码.jpg" width="100px" heigth="100px">
+ <hr>
+ <div class="Card-Box">
+  <button onclick="showSubpage('page1')" class="btn btn-outline-primary">个人信息</button>
+  <button onclick="showSubpage('page2')" class="btn btn-outline-primary">其他信息</button>
+  <button onclick="showSubpage('page3')" class="btn btn-outline-primary">常出没于</button>
+  <button onclick="showSubpage('page4')" class="btn btn-outline-primary">友情链接</button>
+  <div id="page1" class="subpage">
+    <h2><strong>Galaxy（上海）工作室</strong>、<strong>银河编程社区</strong>创始人</h2>
+    <h3>Scratch编程爱好者</h3>
+    <h3><strong>擅长：</strong>Scratch，Python，html，css，javaScript，MySQL</h3>
+   </div>
+  <div id="page2" class="subpage">
+      <h2>其他信息</h2>
+        <p>姓名：<strong>戴**</strong></p>
+        <p>绰号：<strong>乞讨</strong></p>
+        <p>性别：<strong>男</strong></p>
+        <p>幸运数字：<strong>56</strong></p>
+        <p>兴趣爱好：<strong>吉他</strong>、<strong>素描</strong>、<strong>篮球</strong>、<strong>乒乓球</strong>、<strong>摄影</strong>、<strong>魔方（最快纪录22秒）</strong></p>
+        <p>口头禅：<strong>6</strong>、<strong>还活着啊</strong>、<strong>V我50看看实力</strong></p>
+        <p>格言：<strong>记忆是痛苦的根源。</strong>、<strong>没有bug的程序是不完美的！</strong></p>
+  </div>
+  <div id="page3" class="subpage">
+      <h2>常出没于：</h2>
+        <a href="/" style="color:#FFF">银河编程社区</a>
+        <a href="https://scratch.mit.edu/users/DAIQITAO/" style="color:#FFF">Scratch官网</a>
+        <a href="https://www.ccw.site/student/6291a8064cf0c564bfc6129c" style="color:#FFF">共创世界</a>
+        <a href="https://40code.com/#page=user&id=1132" style="color:#FFF">40code</a>
+        <a href="https://codingclip.com/user/1564" style="color:#FFF">别针社区</a>
+        <a href="https://www.scratch-cn.cn/user/project?comid=61c70215a859da15f4370060" style="color:#FFF">中社</a>
+        <a href="https://www.xiaohongshu.com/user/profile/631d7090000000002302712b" style="color:#FFF">小红书</a><br>
+        <a href="https://b23.tv/W721KTh" style="color:#FFF">哔哩哔哩</a>
+        <a href="https://shequ.codemao.cn/user/858933478" style="color:#FFF">编程猫</a>
+        <a href="https://daiqitao.freeflarum.com/u/DAIQITAO" style="color:#FFF">TAO的论坛</a>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?k=YLgBCFSls_umLedU6ogaQFNCZAMf1n4U&noverify=0&personal_qrcode_source=3" style="color:#FFF">QQ</a>
+  </div>
+  <div id="page4" class="subpage">
+      <h2>友情链接：</h2>
+        <a href="/" style="color:#FFF">银河编程社区</a>
+        <a href="https://undefined-kun.github.io" style="color:#FFF">坤总的博客</a><br>
+        <a href="https://Saobby.com" style="color:#FFF">Saobby的主页</a>
+        <a href="http://yanngrou.w3.luyouxia.net/" style="color:#FFF">yangrou的个人主页</a>
+        <a href="https://rundll86.github.io" style="color:#FFF">Rundll86的个人主页</a>
+        <p style="color:darkgray">加友链联系QQ：2277275100</p>
+  </div>
+</div>
+ <hr>
+    <div>
+        <span style="color: white;font-size: 25px;font-weight: bold;margin-top: 20px;">我的作品：</span><br>
+        <div class="projectbox container">
+            <img class="projectbox facer" src="/img/Galaxycode.png"><br>
+            <div class="projectbox content">
+                <span class="projectbox content-title">Galaxycode编程社区</span><br>
+                <span class="projectbox content-text">简约的编程社区，拥有在线版Python、Scratch编辑器。在这里，你可以创作出你的艺术，然后把它分享给全世界！</span><br>
+                <span class="label">Web</span>
+                <span class="label">编程网站</span>
+            </div>
+        </div>
+        <div class="projectbox container">
+            <img class="projectbox facer" src="/img/futureUI.png"><br>
+            <div class="projectbox content">
+                <span class="projectbox content-title">future UI</span><br>
+                <span class="projectbox content-text">银河编程社区使用的css库。简约的UI，厉害在圆角、立体、透明等方面</span><br>
+                <span class="label">css</span>
+                <span class="label">层叠样式表</span>
+            </div>
+        </div>
+        <div class="projectbox container">
+            <img class="projectbox facer" src="https://40code-cdn.zq990.com/static/internalapi/asset/ad2ef8fb7f8e70e8f948c791d1c1a889.jpg"><br>
+            <div class="projectbox content">
+                <span class="projectbox content-title">自制“阴”乐《孤勇者》</span><br>
+                <span class="projectbox content-text">用Scratch完美还原孤勇者的单音</span><br>
+                <span class="label">Scratch</span>
+                <span class="label">音乐</span>
+            </div>
+        </div><br>
+    </div>
+</center>
+    <script>
+        function showSubpage(pageId) {
+            var subpages = document.getElementsByClassName("subpage");
+            for (var i = 0; i < subpages.length; i++) {
+                subpages[i].style.display = "none"; // 隐藏所有子页面
+            }
+
+            var currentPage = document.getElementById(pageId);
+            currentPage.style.display = "block"; // 显示当前选中的子页面
+        }
+    </script>
+                <div class="wave">
+                    <div style="--d1:-0.5s; --d2:-3.5s;"></div>
+                    <div style="--d1:-1s; --d2:-4s;"></div>
+                    <div style="--d1:-1.5s; --d2:-4.5s;"></div>
+                    <div style="--d1:-2s; --d2:-5s;"></div>
+                    <div style="--d1:-2.5s; --d2:-5.5s;"></div>
+                    <div style="--d1:-3s; --d2:-6s;"></div>
+                    <div style="--d1:-3.5s; --d2:-6.5s;"></div>
+                    <div style="--d1:-4s; --d2:-7s;"></div>
+                    <div style="--d1:-4.5s; --d2:-7.5s;"></div>
+                    <div style="--d1:-5s; --d2:-8s;"></div>
+                    <div style="--d1:-5.5s; --d2:-8.5s;"></div>
+                    <div style="--d1:-6s; --d2:-9s;"></div>
+                    <div style="--d1:-6.5s; --d2:-9.5s;"></div>
+                    <div style="--d1:-7s; --d2:-10s;"></div>
+                    <div style="--d1:-7.5s; --d2:-10.5s;"></div>
+                    <div style="--d1:-8s; --d2:-11s;"></div>
+                    <div style="--d1:-8.5s; --d2:-11.5s;"></div>
+                    <div style="--d1:-9s; --d2:-12s;"></div>
+                    <div style="--d1:-9.5s; --d2:-12.5s;"></div>
+                    <div style="--d1:-10s; --d2:-13s;"></div>
+                    <div style="--d1:-10.5s; --d2:-13.5s;"></div>
+                    <div style="--d1:-11s; --d2:-14s;"></div>
+                    <div style="--d1:-11.5s; --d2:-14.5s;"></div>
+                    <div style="--d1:-12s; --d2:-15s;"></div>
+                    <div style="--d1:-12.5s; --d2:-15.5s;"></div>
+                    <div style="--d1:-13s; --d2:-16s;"></div>
+                    <div style="--d1:-13.5s; --d2:-16.5s;"></div>
+                    <div style="--d1:-14s; --d2:-17s;"></div>
+                    <div style="--d1:-14.5s; --d2:-17.5s;"></div>
+                    <div style="--d1:-15s; --d2:-18s;"></div>
+                    <div style="--d1:-15.5s; --d2:-18.5s;"></div>
+                    <div style="--d1:-16s; --d2:-19s;"></div>
+                </div>
+  </body>
+</html>
