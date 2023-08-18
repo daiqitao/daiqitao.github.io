@@ -24,8 +24,10 @@ window.addEventListener('scroll', function() {
   
   if (scrollPosition === 0) {
     element.style.left = '35%';
+    element.classList.remove('small');
   } else {
     element.style.left = '0';
+    element.classList.add('small');
   }
 });
 
@@ -154,7 +156,7 @@ window.addEventListener('scroll', function() {
     border: none;
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    width: 320px;
+    width: 520px;
     display: inline-block;
     letter-spacing: normal;
     line-height: normal;
@@ -182,9 +184,14 @@ window.addEventListener('scroll', function() {
     border-radius: 50%;
     border: 6px solid rgba(225,225,225,0.3);
     position: fixed;
-    left: 30%;
+    left: 35%;
     top: 0;
-    transition: left 1s;
+    transition: left 1s, width 1s, height 1s;
+}
+
+.small {
+  width: 75px;
+  height: 75px;
 }
 
 .i {
