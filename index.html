@@ -7,6 +7,28 @@
    <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页，银河编程社区">
    <script src="/js/yiyan.js"></script>
    <link rel="shortcut icon" href="/img/logo.ico">
+      <script>
+        function showSubpage(pageId) {
+            var subpages = document.getElementsByClassName("subpage");
+            for (var i = 0; i < subpages.length; i++) {
+                subpages[i].style.display = "none"; // 隐藏所有子页面
+            }
+
+            var currentPage = document.getElementById(pageId);
+            currentPage.style.display = "block"; // 显示当前选中的子页面
+        }
+
+window.addEventListener('scroll', function() {
+  const element = document.querySelector('.Card-Img');
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition === 0) {
+    element.style.left = '40%';
+  } else {
+    element.style.left = '0';
+  }
+});
+    </script>
   <style>
            .subpage {
             display: none; /* 默认隐藏所有子页面 */
@@ -145,8 +167,18 @@
 .Card-Img {
     width: 230px;
     height: 230px;
+    z-index: 999;
     border-radius: 50%;
     border: 6px solid rgba(225,225,225,0.3);
+    margin: auto;
+    position: fixed;
+    left: 40%;
+    top: 0;
+    transition: left 1s;
+}
+
+.i {
+    height: 15rem;
 }
 
 li {
@@ -364,6 +396,7 @@ h1 span:nth-child(8) {
 <body>
   <center>
     <img class="Card-Img" src="https://e.saobby.com/uploads/2023/08/202308181249.png">
+     <div class="i"></div>
     <h1>
         <span>D</span>
         <span>A</span>
@@ -487,17 +520,6 @@ h1 span:nth-child(8) {
    <h1 style="color:#fff">原神，启动！</h1><br>
     <span style="color:#fff;font-size:0.2">你干嘛哈哈哎哟</span><br><br><br>
 </center>
-    <script>
-        function showSubpage(pageId) {
-            var subpages = document.getElementsByClassName("subpage");
-            for (var i = 0; i < subpages.length; i++) {
-                subpages[i].style.display = "none"; // 隐藏所有子页面
-            }
-
-            var currentPage = document.getElementById(pageId);
-            currentPage.style.display = "block"; // 显示当前选中的子页面
-        }
-    </script>
                 <div class="wave">
                     <div style="--d1:-0.5s; --d2:-3.5s;"></div>
                     <div style="--d1:-1s; --d2:-4s;"></div>
