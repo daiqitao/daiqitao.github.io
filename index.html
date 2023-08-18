@@ -23,7 +23,18 @@ window.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY;
   
   if (scrollPosition === 0) {
-    element.style.left = '40%';
+    element.style.left = '50%';
+  } else {
+    element.style.left = '0';
+  }
+});
+
+window.addEventListener('scroll', function() {
+  const element = document.querySelector('.h1');
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition === 0) {
+    element.style.left = '50%';
   } else {
     element.style.left = '0';
   }
@@ -170,9 +181,8 @@ window.addEventListener('scroll', function() {
     z-index: 999;
     border-radius: 50%;
     border: 6px solid rgba(225,225,225,0.3);
-    margin: auto;
     position: fixed;
-    left: 40%;
+    left: 50%;
     top: 0;
     transition: left 1s;
 }
@@ -185,6 +195,14 @@ li {
     list-style: none;
 }
 
+.h1 {
+    z-index: 999;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transition: left 1s;
+}
+   
 h1 span {
     top: 20px; 
     position: relative;
@@ -397,6 +415,7 @@ h1 span:nth-child(8) {
   <center>
     <img class="Card-Img" src="https://e.saobby.com/uploads/2023/08/202308181249.png">
      <div class="i"></div>
+  <div class="h1">
     <h1>
         <span>D</span>
         <span>A</span>
@@ -407,6 +426,7 @@ h1 span:nth-child(8) {
         <span>A</span>
         <span>O</span>
     </h1>
+  </div>
   <span style="color:#fff">随机文案：<span style="color:#fff" id="yiyan"></span></span><br>
  <hr>
   <div class="JianJieCard">
