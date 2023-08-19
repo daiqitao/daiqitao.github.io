@@ -7,41 +7,6 @@
    <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页，银河编程社区">
    <script src="/js/yiyan.js"></script>
    <link rel="shortcut icon" href="/img/logo.ico">
-      <script>
-        function showSubpage(pageId) {
-            var subpages = document.getElementsByClassName("subpage");
-            for (var i = 0; i < subpages.length; i++) {
-                subpages[i].style.display = "none"; // 隐藏所有子页面
-            }
-
-            var currentPage = document.getElementById(pageId);
-            currentPage.style.display = "block"; // 显示当前选中的子页面
-        }
-
-window.addEventListener('scroll', function() {
-  const element = document.querySelector('.Card-Img');
-  const scrollPosition = window.scrollY;
-  
-  if (scrollPosition === 0) {
-    element.style.left = '35%';
-    element.classList.remove('small');
-  } else {
-    element.style.left = '0';
-    element.classList.add('small');
-  }
-});
-
-window.addEventListener('scroll', function() {
-  const element = document.querySelector('.h1');
-  const scrollPosition = window.scrollY;
-  
-  if (scrollPosition === 0) {
-    element.style.left = '45%';
-  } else {
-    element.style.left = '8%';
-  }
-});
-    </script>
   <style>
            .subpage {
             display: none; /* 默认隐藏所有子页面 */
@@ -135,6 +100,57 @@ window.addEventListener('scroll', function() {
             --bs-gradient: none;
           }
 
+         .form-control {
+            display: block;
+            width: 300px;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 0.8;
+            color: #212529;
+            background-color: rgba(255, 255, 255, 0.2);
+            background-clip: padding-box;
+            border: 1px solid black;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 40px;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .form-control {
+              transition: none;
+            }
+          }
+          .form-control[type=file] {
+            overflow: hidden;
+          }
+          .form-control[type=file]:not(:disabled):not([readonly]) {
+            cursor: pointer;
+          }
+          .form-control:focus {
+            color: #212529;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+          }
+          .form-control::-webkit-date-and-time-value {
+            height: 1.5em;
+          }
+          .form-control::-moz-placeholder {
+            color: #6c757d;
+            opacity: 1;
+          }
+          .form-control::placeholder {
+            color: #6c757d;
+            opacity: 1;
+          }
+          .form-control:disabled {
+            background-color: #e9ecef;
+            opacity: 1;
+          }
+   
  .JianJieCard {
     background-color:rgba(35,66,120,0.6);
     color: #FFF;
@@ -367,6 +383,10 @@ h1 span:nth-child(8) {
             margin:30px;
         }
 
+        .reply {
+            margin-left: 3em;
+        }
+   
         .projectbox.container {
             width: 250px;
             vertical-align:top;
@@ -561,8 +581,13 @@ h1 span:nth-child(8) {
  <hr style="width:15%">
    <div class="forumCard">
      <h2>评论区</h2>
-     <hr style="width:30%"><br>
-       <span style="margin:auto;top:50%">功能制作中，敬请期待...</span>
+        <h2>发送评论</h2>
+        <input type="text" id="username-input" placeholder="用户名" class="form-control me-2"><br><br>
+        <textarea id="comment-content" rows="4" cols="50" placeholder="内容..."></textarea><br>
+        <button type="submit" class="btn btn-outline-light">发送</button>
+    </form><br>
+    <hr style="width:70%"><br><br><br>
+    <div id="comments-container"></div>
    </div>
  <hr><br>
    <h1 style="color:#fff">原神，启动！</h1><br>
@@ -602,5 +627,147 @@ h1 span:nth-child(8) {
                     <div style="--d1:-15.5s; --d2:-18.5s;"></div>
                     <div style="--d1:-16s; --d2:-19s;"></div>
                 </div>
+       <script>
+        function showSubpage(pageId) {
+            var subpages = document.getElementsByClassName("subpage");
+            for (var i = 0; i < subpages.length; i++) {
+                subpages[i].style.display = "none"; // 隐藏所有子页面
+            }
+
+            var currentPage = document.getElementById(pageId);
+            currentPage.style.display = "block"; // 显示当前选中的子页面
+        }
+
+window.addEventListener('scroll', function() {
+  const element = document.querySelector('.Card-Img');
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition === 0) {
+    element.style.left = '35%';
+    element.classList.remove('small');
+  } else {
+    element.style.left = '0';
+    element.classList.add('small');
+  }
+});
+
+window.addEventListener('scroll', function() {
+  const element = document.querySelector('.h1');
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition === 0) {
+    element.style.left = '45%';
+  } else {
+    element.style.left = '8%';
+  }
+});
+
+// 获取评论列表
+function getComments() {
+  fetch('http://galaxy.w1.luyouxia.net/api/comments')
+    .then(response => response.json())
+    .then(data => {
+      const commentsContainer = document.getElementById('comments-container');
+      commentsContainer.innerHTML = ''; // 清空之前的评论内容
+
+      data.forEach(comment => {
+        const commentElement = document.createElement('div');
+
+        const usernameElement = document.createElement('strong');
+        usernameElement.innerText = comment.username + ': ';
+        commentElement.appendChild(usernameElement);
+
+        const contentElement = document.createElement('span');
+        contentElement.innerText = comment.content;
+        commentElement.appendChild(contentElement);
+
+        const replyButton = document.createElement('button');
+        replyButton.innerText = '回复';
+        replyButton.addEventListener('click', () => addReply(comment.id)); // 将评论ID作为参数传递给addReply函数
+        commentElement.appendChild(replyButton);
+
+        // 显示回复内容
+        if (comment.replies && comment.replies.length > 0) {
+          const repliesContainer = document.createElement('div');
+          comment.replies.forEach(reply => {
+            const replyElement = document.createElement('div');
+            replyElement.classList.add('reply');
+
+            const replyUsernameElement = document.createElement('strong');
+            replyUsernameElement.innerText = reply.username + ': ';
+            replyElement.appendChild(replyUsernameElement);
+
+            const replyContentElement = document.createElement('span');
+            replyContentElement.innerText = reply.content;
+            replyElement.appendChild(replyContentElement);
+
+            repliesContainer.appendChild(replyElement);
+          });
+
+          // 将回复容器添加到评论元素中
+          commentElement.appendChild(repliesContainer);
+        }
+
+        commentsContainer.appendChild(commentElement);
+      });
+    });
+}
+
+
+// 新增评论
+function addComment(event) {
+  event.preventDefault();
+  const username = document.getElementById('username-input').value;
+  const commentContent = document.getElementById('comment-content').value;
+
+  fetch('http://galaxy.w1.luyouxia.net/api/comments', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ 
+      username: username,
+      content: commentContent
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    getComments();
+    document.getElementById('add-comment-form').reset();
+  });
+}
+
+// 新增回复
+function addReply(commentId) {
+  const replyUsername = prompt('请输入用户名:');
+  const replyContent = prompt('请输入回复内容:');
+
+  if (replyUsername && replyContent) {
+    fetch(`http://galaxy.w1.luyouxia.net/api/comments/${commentId}/replies`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        username: replyUsername,
+        content: replyContent 
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      getComments();
+    });
+  }
+  getComments();
+}
+
+// 页面加载完成时获取评论列表
+document.addEventListener('DOMContentLoaded', () => {
+  getComments();
+  document.getElementById('add-comment-form').addEventListener('submit', addComment);
+});
+    </script>
   </body>
 </html>
