@@ -194,7 +194,7 @@
 }
 
 .forumCard {
-    background-color:rgba(70,70,70,0.8);
+    background-color:rgba(225,225,225,0.3);
     color: #FFF;
     border-radius: 10px;
     border: none;
@@ -581,10 +581,9 @@ h1 span:nth-child(8) {
  <hr style="width:15%">
    <div class="forumCard">
      <h2>评论区</h2>
-        <h2>发送评论</h2>
         <input type="text" id="username-input" placeholder="用户名" class="form-control me-2"><br><br>
         <textarea id="comment-content" rows="4" cols="50" placeholder="内容..."></textarea><br>
-        <button type="submit" class="btn btn-outline-light">发送</button>
+        <button type="submit" class="btn btn-outline-primary" onclick="alert('*请求后端失败，请稍后再试！')">发送</button>
     </form><br>
     <hr style="width:70%"><br><br><br>
     <div id="comments-container"></div>
