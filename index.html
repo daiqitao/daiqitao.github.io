@@ -663,7 +663,7 @@ window.addEventListener('scroll', function() {
 
 // 获取评论列表
 function getComments() {
-  fetch('http://galaxy.w1.luyouxia.net/api/comments')
+  fetch('https://4h27336a94.goho.co/api/comments')
     .then(response => response.json())
     .then(data => {
       const commentsContainer = document.getElementById('comments-container');
@@ -719,7 +719,7 @@ function addComment(event) {
   const username = document.getElementById('username-input').value;
   const commentContent = document.getElementById('comment-content').value;
 
-  fetch('http://galaxy.w1.luyouxia.net/api/comments', {
+  fetch('https://4h27336a94.goho.co/api/comments', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -743,7 +743,7 @@ function addReply(commentId) {
   const replyContent = prompt('请输入回复内容:');
 
   if (replyUsername && replyContent) {
-    fetch(`http://galaxy.w1.luyouxia.net/api/comments/${commentId}/replies`, {
+    fetch(`https://4h27336a94.goho.co/api/comments/${commentId}/replies`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
