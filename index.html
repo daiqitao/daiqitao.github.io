@@ -481,7 +481,7 @@ h1 span:nth-child(8) {
 </div>
  <hr style="width:15%">
     <div class="projectCard">
-       <div id="text2" style="color: white;font-size: 25px;font-weight: bold;margin-top: 20px;"></div><br>
+       <h2>我的作品</h2><br>
         <div class="projectbox container">
             <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/07/pPE09d1.png"><br>
             <div class="projectbox content">
@@ -530,7 +530,7 @@ h1 span:nth-child(8) {
     </div>
  <hr style="width:15%">
    <div class="forumCard">
-    <div id="text3" style="font-size:50px;color:#000;"></div><br><br>
+    <h2>评论区</h2><br><br>
         <input type="text" id="username-input" placeholder="请输入用户名" class="form-control me-2"><br><br>
         <textarea id="comment-content" rows="4" cols="50" placeholder="内容..."></textarea><br>
         <button onclick="submit()" class="btn btn-outline-primary">发送</button>
@@ -591,34 +591,6 @@ function submit(){
     function typeWriter() {
       if (index < text.length) {
         document.getElementById("text").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    window.onload = function() {
-      typeWriter();
-    };
-
-    var text2 = "我的作品";
-    var speed = 150; 
-    var index = 0;
-    function typeWriter() {
-      if (index < text.length) {
-        document.getElementById("text2").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    window.onload = function() {
-      typeWriter();
-    };
-
-    var text3 = "评论区";
-    var speed = 150; 
-    var index = 0;
-    function typeWriter() {
-      if (index < text.length) {
-        document.getElementById("text3").innerHTML += text.charAt(index);
         index++;
         setTimeout(typeWriter, speed);
       }
