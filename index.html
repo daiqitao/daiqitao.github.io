@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>DAIQITAO的主页</title>
-   <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页，银河编程社区">
+   <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页，银河编程">
    <script src="/js/yiyan.js"></script>
    <link rel="shortcut icon" href="/img/logo.ico">
   <style>
@@ -153,7 +153,7 @@
    
  .JianJieCard {
     background-color:rgba(35,66,120,0.6);
-    color: #FFF;
+    color: #fff;
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -167,7 +167,7 @@
    
 .Card-Box {
     background-color:rgba(225,225,225,0.3);
-    color: #FFF;
+    color: #000;
     border-radius: 10px;
     border: none;
     padding: 10px;
@@ -186,7 +186,7 @@
     border: none;
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    width: 70%;
+    width: 40%;
     display: inline-block;
     letter-spacing: normal;
     line-height: normal;
@@ -195,12 +195,12 @@
 
 .forumCard {
     background-color:rgba(225,225,225,0.3);
-    color: #FFF;
+    color: #000;
     border-radius: 10px;
     border: none;
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    width: 66%;
+    width: 56%;
     height: 600px;
     display: inline-block;
     letter-spacing: normal;
@@ -302,55 +302,8 @@ h1 span:nth-child(8) {
     padding: 0;
 }
 
-.wave{
-    /* 弹性布局 */
-    display: flex;
-    /* 设置投影 */
-    filter: drop-shadow(120px 0 0 rgba(225,225,225,1));
-    bottom: 0;
-}
-.wave div{
-    position: relative;
-    width: 40px;
-    height: 200px;
-    margin: 10px;
-    border-radius: 3px;
-    overflow: hidden;
-}
-.wave div::before{
-    content: "";
-    width: 300%;
-    height: 100%;
-    background-color: rgb(95, 169, 215);
-    position: absolute;
-    left: -100%;
-    top: 50%;
-    /* 执行动画：动画名 时长 贝塞尔曲线 无限播放 来回轮流播放 */
-    animation: upDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate, wave 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate;
-    /* 通过var函数调用自定义属性--d1、--d2，设置动画延迟 */
-    animation-delay: var(--d1), var(--d2);
-}
-
-/* 定义动画 */
-@keyframes upDown {
-    0%{
-        top: 70%;
-    }
-    100%{
-        top: 30%;
-    }
-}
-@keyframes wave {
-    0%{
-        transform: rotateZ(-20deg);
-    }
-    100%{
-        transform: rotateZ(20deg);
-    }
-}
-
         body {
-            background-image: url(https://s1.ax1x.com/2023/08/07/pPE6Cod.jpg);
+            background:linear-gradient(to bottom right,#498fff, #ffae00);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -429,12 +382,12 @@ h1 span:nth-child(8) {
         }
 
         a:link {
-            color: white;
+            color: #000;
             text-decoration: none;
         }
 
         a:hover {
-            color: white;
+            color: #000;
             text-decoration: underline;
         }
 
@@ -444,7 +397,7 @@ h1 span:nth-child(8) {
         }
 
         a:visited {
-            color: white;
+            color: #000;
             text-decoration: none;
         }
 
@@ -472,13 +425,12 @@ h1 span:nth-child(8) {
   <span style="color:#fff">随机文案：<span style="color:#fff" id="yiyan"></span></span><br>
  <hr>
   <div class="JianJieCard">
-   <span style="color:#FFF;font-size:20px">我是DAIQITAO，欢迎来到我的主页！</span>
+    <div id="text" style="font-size:20px;color:#fff;"></div>
    <br>
       <span class="label">前端开发爱好者</span>
       <span class="label">原神魔怔人</span>
       <span class="label">选择恐惧症</span><br>
-    <span style="color:#FFF;">“发掘无限创意，开启编程之旅！”</span><br><br>
-   <p style="color:#FFF;">哪位好心人可以赞助我（）</p>
+   <p style="color:#FFF;">哪位好心人可以赞助我</p>
      <img src="/img/收款码.jpg" width="100px" heigth="100px">
   </div>
 <hr style="width:15%">
@@ -489,7 +441,7 @@ h1 span:nth-child(8) {
     <button onclick="showSubpage('page4')" class="btn btn-outline-primary">友链</button>
   <div id="page1" class="subpage">
    <h2>个人简介</h2>
-    <h3><strong>Galaxy（上海）工作室</strong>、<strong>银河编程</strong>创始人</h2>
+    <h3><strong>银河编程工作室</strong>、<strong>银河编程网</strong>创始人</h2>
     <h3>Scratch编程爱好者</h3>
     <h3><strong>擅长：</strong>Scratch，Python，html，css，JavaScript，MySQL</h3>
    </div>
@@ -505,33 +457,31 @@ h1 span:nth-child(8) {
   </div>
   <div id="page3" class="subpage">
       <h2>账号链接：</h2>
-        <a style="color:#fff">原神UID：287711029</a><br>
-        <a style="color:#fff">泡泡IM：daiqitao</a><br>
-        <a href="https://scratch.mit.edu/users/DAIQITAO/" style="color:#FFF">Scratch官网</a>
-        <a href="https://www.ccw.site/student/6291a8064cf0c564bfc6129c" style="color:#FFF">共创世界</a>
-        <a href="https://40code.com/#page=user&id=1132" style="color:#FFF">40code</a>
-        <a href="https://codingclip.com/user/1564" style="color:#FFF">别针社区</a>
-        <a href="https://www.scratch-cn.cn/user/project?comid=61c70215a859da15f4370060" style="color:#FFF">中社</a>
-        <a href="https://www.xiaohongshu.com/user/profile/631d7090000000002302712b" style="color:#FFF">小红书</a><br>
-        <a href="https://b23.tv/W721KTh" style="color:#FFF">哔哩哔哩</a>
-        <a href="https://shequ.codemao.cn/user/858933478" style="color:#FFF">编程猫</a>
-        <a href="http://qm.qq.com/cgi-bin/qm/qr?k=YLgBCFSls_umLedU6ogaQFNCZAMf1n4U&noverify=0&personal_qrcode_source=3" style="color:#FFF">QQ</a>
+        <a style="color:#000">原神UID：287711029</a><br>
+        <a style="color:#000">泡泡IM：daiqitao</a><br>
+        <a href="https://scratch.mit.edu/users/DAIQITAO/" style="color:#000">Scratch官网</a>
+        <a href="https://www.ccw.site/student/6291a8064cf0c564bfc6129c" style="color:#000">共创世界</a>
+        <a href="https://40code.com/#page=user&id=1132" style="color:#000">40code</a>
+        <a href="https://codingclip.com/user/1564" style="color:#000">别针社区</a>
+        <a href="https://www.scratch-cn.cn/user/project?comid=61c70215a859da15f4370060" style="color:#000">中社</a>
+        <a href="https://www.xiaohongshu.com/user/profile/631d7090000000002302712b" style="color:#000">小红书</a><br>
+        <a href="https://b23.tv/W721KTh" style="color:#000">哔哩哔哩</a>
+        <a href="https://shequ.codemao.cn/user/858933478" style="color:#000">编程猫</a>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?k=YLgBCFSls_umLedU6ogaQFNCZAMf1n4U&noverify=0&personal_qrcode_source=3" style="color:#000">QQ</a>
         <a href="https://github.com/daiqitao" style="color:#fff">github</a>
-        <a href="https://activity.kugou.com/share/v-c7b4da67/index.html?id=4854aa3ee90bc78067e06fd34f208cb1" style="color:#fff">酷狗音乐</a>
+        <a href="https://activity.kugou.com/share/v-c7b4da67/index.html?id=4854aa3ee90bc78067e06fd34f208cb1" style="color:#000">酷狗音乐</a>
   </div>
   <div id="page4" class="subpage">
       <h2>友情链接：</h2>
-        <a href="https://galaxyProgram.github.io" style="color:#FFF">银河编程网</a>
-        <a href="https://undefined-kun.github.io" style="color:#FFF">坤总的博客</a><br>
-        <a href="https://Saobby.com" style="color:#FFF">Saobby的主页</a>
-        <a href="http://yangrou.w1.luyouxia.net/" style="color:#FFF">yangrou的个人主页</a>
-        <a href="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4" style="color:#fff">Rundll86的主页</a>
-        <p style="color:black">加友链请联系QQ：2277275100</p>
+        <a href="https://galaxyProgram.github.io" style="color:#000">银河编程网</a>
+        <a href="https://undefined-kun.github.io" style="color:#000">坤总的博客</a>
+        <a href="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4" style="color:#000">Rundll86的主页</a>
+        <p style="color:#ddd">加友链请联系QQ：2277275100</p>
   </div>
 </div>
  <hr style="width:15%">
     <div class="projectCard">
-        <span style="color: white;font-size: 25px;font-weight: bold;margin-top: 20px;">我的作品：</span><br>
+       <div id="text2" style="color: white;font-size: 25px;font-weight: bold;margin-top: 20px;"></div><br>
         <div class="projectbox container">
             <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/07/pPE09d1.png"><br>
             <div class="projectbox content">
@@ -580,7 +530,7 @@ h1 span:nth-child(8) {
     </div>
  <hr style="width:15%">
    <div class="forumCard">
-     <h2>评论区</h2><br><br>
+    <div id="text3" style="font-size:50px;color:#000;"></div><br><br>
         <input type="text" id="username-input" placeholder="请输入用户名" class="form-control me-2"><br><br>
         <textarea id="comment-content" rows="4" cols="50" placeholder="内容..."></textarea><br>
         <button onclick="submit()" class="btn btn-outline-primary">发送</button>
@@ -592,40 +542,6 @@ h1 span:nth-child(8) {
    <h1 style="color:#fff">原神，启动！</h1><br>
     <span style="color:#fff;font-size:0.2">你干嘛哈哈哎哟</span><br><br><br>
 </center>
-                <div class="wave">
-                    <div style="--d1:-0.5s; --d2:-3.5s;"></div>
-                    <div style="--d1:-1s; --d2:-4s;"></div>
-                    <div style="--d1:-1.5s; --d2:-4.5s;"></div>
-                    <div style="--d1:-2s; --d2:-5s;"></div>
-                    <div style="--d1:-2.5s; --d2:-5.5s;"></div>
-                    <div style="--d1:-3s; --d2:-6s;"></div>
-                    <div style="--d1:-3.5s; --d2:-6.5s;"></div>
-                    <div style="--d1:-4s; --d2:-7s;"></div>
-                    <div style="--d1:-4.5s; --d2:-7.5s;"></div>
-                    <div style="--d1:-5s; --d2:-8s;"></div>
-                    <div style="--d1:-5.5s; --d2:-8.5s;"></div>
-                    <div style="--d1:-6s; --d2:-9s;"></div>
-                    <div style="--d1:-6.5s; --d2:-9.5s;"></div>
-                    <div style="--d1:-7s; --d2:-10s;"></div>
-                    <div style="--d1:-7.5s; --d2:-10.5s;"></div>
-                    <div style="--d1:-8s; --d2:-11s;"></div>
-                    <div style="--d1:-8.5s; --d2:-11.5s;"></div>
-                    <div style="--d1:-9s; --d2:-12s;"></div>
-                    <div style="--d1:-9.5s; --d2:-12.5s;"></div>
-                    <div style="--d1:-10s; --d2:-13s;"></div>
-                    <div style="--d1:-10.5s; --d2:-13.5s;"></div>
-                    <div style="--d1:-11s; --d2:-14s;"></div>
-                    <div style="--d1:-11.5s; --d2:-14.5s;"></div>
-                    <div style="--d1:-12s; --d2:-15s;"></div>
-                    <div style="--d1:-12.5s; --d2:-15.5s;"></div>
-                    <div style="--d1:-13s; --d2:-16s;"></div>
-                    <div style="--d1:-13.5s; --d2:-16.5s;"></div>
-                    <div style="--d1:-14s; --d2:-17s;"></div>
-                    <div style="--d1:-14.5s; --d2:-17.5s;"></div>
-                    <div style="--d1:-15s; --d2:-18s;"></div>
-                    <div style="--d1:-15.5s; --d2:-18.5s;"></div>
-                    <div style="--d1:-16s; --d2:-19s;"></div>
-                </div>
        <script>
         function showSubpage(pageId) {
             var subpages = document.getElementsByClassName("subpage");
@@ -668,6 +584,48 @@ function submit(){
     httpRequest.setRequestHeader("Content-type","application/json");
     httpRequest.send('');
  }
+
+    var text = "我是DAIQITAO，欢迎来到我的主页！";
+    var speed = 150; 
+    var index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = function() {
+      typeWriter();
+    };
+
+    var text2 = "我的作品";
+    var speed = 150; 
+    var index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("text2").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = function() {
+      typeWriter();
+    };
+
+    var text3 = "评论区";
+    var speed = 150; 
+    var index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("text3").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = function() {
+      typeWriter();
+    };
     </script>
   </body>
 </html>
