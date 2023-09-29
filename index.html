@@ -303,7 +303,7 @@ h1 span:nth-child(8) {
 }
 
         body {
-            background:linear-gradient(to bottom right,#498fff, #ffae00);
+            background:linear-gradient(to bottom right,#498fff, pink);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -422,7 +422,7 @@ h1 span:nth-child(8) {
         <span>O</span>
     </h1>
   </div>
-  <span style="color:#fff">随机文案：<span style="color:#fff" id="yiyan"></span></span><br>
+  <span style="color:#fff">随机文案：<span style="color:#fff" id="quote"></span></span><br>
  <hr>
   <div class="JianJieCard">
     <div id="text" style="font-size:20px;color:#fff;"></div>
@@ -578,7 +578,7 @@ window.addEventListener('scroll', function() {
 });
 
 function submit(){
-    alert('请求后端失败，请联系站长寻求帮助！')
+    alert('请求后端失败！')
     var httpRequest =new XMLHttpRequest();
     httpRequest.open('GET','https://4h27336a94.goho.co/api/comments',true);
     httpRequest.setRequestHeader("Content-type","application/json");
