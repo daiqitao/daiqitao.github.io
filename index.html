@@ -150,6 +150,20 @@
             background-color: #e9ecef;
             opacity: 1;
           }
+
+  #screen {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      margin-top: -20px;
+      width: 100%;
+      height: 5rem;
+      right:0;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: -100px;
+  }
    
  .JianJieCard {
     background-color:rgba(35,66,120,0.5);
@@ -193,20 +207,6 @@
     margin: 8px;
 }
 
-.forumCard {
-    background-color:rgba(225,225,225,0.3);
-    color: #000;
-    border-radius: 10px;
-    border: none;
-    padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    width: 56%;
-    height: 600px;
-    display: inline-block;
-    letter-spacing: normal;
-    line-height: normal;
-    margin: 8px;
-}
 
 .Card-Img {
     width: 230px;
@@ -215,14 +215,14 @@
     border-radius: 50%;
     border: 6px solid rgba(225,225,225,0.3);
     position: fixed;
-    left: 35%;
+    left: 41%;
     top: 0;
     transition: left 1s, width 1s, height 1s;
 }
 
 .small {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
 }
 
 .i {
@@ -233,13 +233,6 @@ li {
     list-style: none;
 }
 
-.h1 {
-    z-index: 999;
-    position: fixed;
-    left: 45%;
-    top: 0;
-    transition: left 1s;
-}
    
 h1 span {
     top: 20px; 
@@ -335,10 +328,6 @@ h1 span:nth-child(8) {
             width: 50%;
             margin:30px;
         }
-
-        .reply {
-            margin-left: 3em;
-        }
    
         .projectbox.container {
             width: 250px;
@@ -405,10 +394,24 @@ h1 span:nth-child(8) {
             display: inline-block;
         }
     </style>
+        <script>
+          function showSubpage(pageId) {
+              var subpages = document.getElementsByClassName("subpage");
+              for (var i = 0; i < subpages.length; i++) {
+                  subpages[i].style.display = "none";
+              }
+  
+              var currentPage = document.getElementById(pageId);
+              currentPage.style.display = "block";
+          }
+    </script>
 </head>
 <body>
   <center>
-    <img class="Card-Img" src="https://s1.ax1x.com/2023/08/03/pPiwzxs.png">
+    <div id="screen">
+       <img class="Card-Img" src="https://s1.ax1x.com/2023/08/03/pPiwzxs.png">
+       <center><span id="headSpan" style="z-index:999;position:fixed;color:#fff;font-size:30px;">DAIQITAO的主页</span></center>
+    </div>
      <div class="i"></div>
   <div class="h1">
     <h1>
@@ -425,12 +428,10 @@ h1 span:nth-child(8) {
   <span style="color:#fff">随机文案：<span style="color:#fff" id="quote"></span></span><br>
  <hr>
   <div class="JianJieCard">
-    <div id="text" style="font-size:20px;color:#fff;"></div>
-   <br>
+    <div id="text" style="font-size:20px;color:#fff;"></div><br>
       <span class="label">前端开发爱好者</span>
-      <span class="label">原神魔怔人</span>
-      <span class="label">选择恐惧症</span><br>
-   <p style="color:#FFF;">哪位好心人可以赞助我</p>
+      <span class="label">原神魔怔人</span><br>
+   <p style="color:#FFF;">对我赞助：</p>
      <img src="/img/收款码.jpg" width="100px" heigth="100px">
   </div>
 <hr style="width:15%">
@@ -441,7 +442,7 @@ h1 span:nth-child(8) {
     <button onclick="showSubpage('page4')" class="btn btn-outline-primary">友链</button>
   <div id="page1" class="subpage">
    <h2>个人简介</h2>
-    <h3><strong>银河编程工作室</strong>、<strong>银河编程网</strong>创始人</h2>
+    <h3><strong>银河编程工作室</strong>创始人</h2>
     <h3>Scratch编程爱好者</h3>
     <h3><strong>擅长：</strong>Scratch，Python，html，css，JavaScript，MySQL</h3>
    </div>
@@ -452,8 +453,8 @@ h1 span:nth-child(8) {
         <p>性别：<strong>男</strong></p>
         <p>幸运数字：<strong>56</strong></p>
         <p>兴趣爱好：<strong>吉他</strong>、<strong>素描</strong>、<strong>篮球</strong>、<strong>乒乓球</strong>、<strong>魔方</strong></p>
-        <p>口头禅：<strong>6</strong>、<strong>原神启动！</strong>、<strong>V我50看看实力</strong></p>
-        <p>格言：<strong>记忆是痛苦的根源</strong></p>
+        <p>口头禅：<strong>6</strong>、<strong>原神启动！</strong>、<strong>有没道德啊？道法白学了？</strong></p>
+        <p>格言：<strong>有些事情就是命中注定，尽管你多努力，也无法改变结局。</strong></p>
   </div>
   <div id="page3" class="subpage">
       <h2>账号链接：</h2>
@@ -467,13 +468,12 @@ h1 span:nth-child(8) {
         <a href="https://www.xiaohongshu.com/user/profile/631d7090000000002302712b" style="color:#000">小红书</a><br>
         <a href="https://b23.tv/W721KTh" style="color:#000">哔哩哔哩</a>
         <a href="https://shequ.codemao.cn/user/858933478" style="color:#000">编程猫</a>
-        <a href="http://qm.qq.com/cgi-bin/qm/qr?k=YLgBCFSls_umLedU6ogaQFNCZAMf1n4U&noverify=0&personal_qrcode_source=3" style="color:#000">QQ</a>
-        <a href="https://github.com/daiqitao" style="color:#000">github</a>
+        <a href="https://github.com/daiqitao" style="color:#000">Github</a>
         <a href="https://activity.kugou.com/share/v-c7b4da67/index.html?id=4854aa3ee90bc78067e06fd34f208cb1" style="color:#000">酷狗音乐</a>
   </div>
   <div id="page4" class="subpage">
       <h2>友情链接：</h2>
-        <a href="https://galaxyProgram.github.io" style="color:#000">银河编程网</a>
+        <a href="https://galaxycodingstudios.github.io" style="color:#000">银河编程工作室官网</a>
         <a href="https://undefined-kun.github.io" style="color:#000">坤总的博客</a>
         <a href="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4" style="color:#000">Rundll86的主页</a>
         <p style="color:#ddd">加友链请联系QQ：2277275100</p>
@@ -485,8 +485,8 @@ h1 span:nth-child(8) {
         <div class="projectbox container">
             <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/07/pPE09d1.png"><br>
             <div class="projectbox content">
-                <a class="projectbox content-title" href="https://galaxyProgram.github.io">Galaxycode银河编程网</a><br>
-                <span class="projectbox content-text">简约的创意编程网站，搭载在线版Python、Scratch编辑器。“发掘无限创意，开启编程之旅！”</span><br>
+                <a class="projectbox content-title" href="https://galaxycodingstudios.github.io">GalaxyCoding银河编程</a><br>
+                <span class="projectbox content-text">简约的创意编程网站，搭载在线版Python、Scratch、前端编辑器。“发掘无限创意，开启编程之旅！”</span><br>
                 <span class="label">Web</span>
                 <span class="label">编程网站</span>
             </div>
@@ -495,7 +495,7 @@ h1 span:nth-child(8) {
             <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/03/pPiwjPg.jpg"><br>
             <div class="projectbox content">
                 <a class="projectbox content-title" href="https://github.com/daiqitao/futureUI">future UI</a><br>
-                <span class="projectbox content-text">Galaxycode银河编程网使用的css库。简约的UI，厉害在渐变、圆角、立体、透明等方面</span><br>
+                <span class="projectbox content-text">GalaxyCoding银河编程网使用的css库。简约的UI，厉害在渐变、圆角、立体、透明等方面</span><br>
                 <span class="label">css</span>
                 <span class="label">Web应用支持库</span>
             </div>
@@ -512,7 +512,7 @@ h1 span:nth-child(8) {
         <div class="projectbox container">
             <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/20/pP8svB4.png"><br>
             <div class="projectbox content">
-                <a class="projectbox content-title" href="https://www.40code.com/#page=work&id=4703">涂鸦跑酷v2.0</a><br>
+                <a class="projectbox content-title" href="https://www.40code.com/#page=work&id=4703">涂鸦跑酷v3.0</a><br>
                 <span class="projectbox content-text">不一样的跑酷——涂鸦跑酷。一个按下空格躲避障碍物的小游戏，背景和角色手绘而成。</span><br>
                 <span class="label">Scratch</span>
                 <span class="label">跑酷游戏</span>
@@ -528,37 +528,43 @@ h1 span:nth-child(8) {
             </div>
         </div><br><br>
     </div>
- <hr style="width:15%">
-   <div class="forumCard">
-    <h2>评论区</h2><br><br>
-        <input type="text" id="username-input" placeholder="请输入用户名" class="form-control me-2"><br><br>
-        <textarea id="comment-content" rows="4" cols="50" placeholder="内容..."></textarea><br>
-        <button onclick="submit()" class="btn btn-outline-primary">发送</button>
-    </form><br>
-    <hr style="width:70%"><br><br><br>
-    <div id="comments-container"></div>
-   </div>
  <hr><br>
    <h1 style="color:#fff">原神，启动！</h1><br>
     <span style="color:#fff;font-size:0.2">你干嘛哈哈哎哟</span><br><br><br>
 </center>
-       <script>
-        function showSubpage(pageId) {
-            var subpages = document.getElementsByClassName("subpage");
-            for (var i = 0; i < subpages.length; i++) {
-                subpages[i].style.display = "none"; // 隐藏所有子页面
-            }
+<script>
+var screen = document.getElementById("screen");
 
-            var currentPage = document.getElementById(pageId);
-            currentPage.style.display = "block"; // 显示当前选中的子页面
-        }
+window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 100) {
+    screen.style.top = "0";
+  } else {
+    screen.style.top = "-100px";
+  }
+});
+
+
+
+
+var headSpan = document.getElementById("headSpan");
+
+window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 100) {
+    headSpan.style.top = "0";
+  } else {
+    headSpan.style.top = "-100px";
+  }
+});
+
+
+
 
 window.addEventListener('scroll', function() {
   const element = document.querySelector('.Card-Img');
   const scrollPosition = window.scrollY;
   
   if (scrollPosition === 0) {
-    element.style.left = '35%';
+    element.style.left = '41%';
     element.classList.remove('small');
   } else {
     element.style.left = '0';
@@ -566,26 +572,11 @@ window.addEventListener('scroll', function() {
   }
 });
 
-window.addEventListener('scroll', function() {
-  const element = document.querySelector('.h1');
-  const scrollPosition = window.scrollY;
-  
-  if (scrollPosition === 0) {
-    element.style.left = '45%';
-  } else {
-    element.style.left = '8%';
-  }
-});
 
-function submit(){
-    alert('请求后端失败！')
-    var httpRequest =new XMLHttpRequest();
-    httpRequest.open('GET','https://4h27336a94.goho.co/api/comments',true);
-    httpRequest.setRequestHeader("Content-type","application/json");
-    httpRequest.send('');
- }
 
-    var text = "我是DAIQITAO，欢迎来到我的主页！";
+
+
+    var text = "您好，欢迎来到我的个人主页！";
     var speed = 150; 
     var index = 0;
     function typeWriter() {
