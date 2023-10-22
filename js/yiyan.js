@@ -1,6 +1,6 @@
         // 发起GET请求
         function fetchRandomQuote() {
-            fetch('http://galaxy.ates.top/api/quote')
+            fetch('https://api-omega-opal.vercel.app/api/quote')
                 .then(response => response.json())
                 .then(data => {
                     if (data && data.quote) {
