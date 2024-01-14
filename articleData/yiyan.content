@@ -1,0 +1,28 @@
+$head;*此功能由daiqitao版权所有。$line;
+以下是一个请求的示例：
+$code-s;
+//这是JavaScript代码！
+        // 发起GET请求
+        function fetchRandomQuote() {
+            fetch('https://api-omega-opal.vercel.app/api/quote')
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.quote) {
+                        document.getElementById("quote").innerHTML = data.quote;
+                    }
+                })
+                .catch(error => console.log('Error:', error));
+        }
+        window.onload = fetchRandomQuote;  // 页面加载时自动获取随机文案
+$code-e;
+$line;
+$head;然后，在html中写入
+$code-s;
+<span id="quote"></span>
+$code-e;
+$line;
+即可。$line;
+$line;
+*ps：api在国外，所以你需要用"魔法"才能请求哦！$line;
+$line;
+$head;更多文章编写中...
