@@ -1,10 +1,48 @@
 $head;*此功能由daiqitao版权所有。$line;
-以下是一个请求的示例：
+一、后端$line;
+$head;首先，你需要安装一个Python3.8或3.9$line;
+然后在cmd中，输入$line;
+$code-s;
+pip install flask
+$code-e;
+$line;
+再新建一个app.py，输入以下代码：$line;
+$code-s;
+from flask import Flask, make_response
+import json
+from flask_cors import CORS
+import random
+//这些包记得安装哦！
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route("/api/quote")
+def generate_random_quote():
+    quotes = [
+        "文案1",
+        "文案2",
+        "文案3",
+        //以此类推
+    ]
+
+    random_quote = random.choice(quotes)
+    
+    data = {"quote": random_quote}
+    response = make_response(json.dumps(data))
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
+
+app.run("0.0.0.0", 80)
+$code-e;
+$line;
+然后运行这个py文件。$line;
+二、以下是一个前端请求的示例：
 $code-s;
 //这是JavaScript代码！
         // 发起GET请求
         function fetchRandomQuote() {
-            fetch('https://api-omega-opal.vercel.app/api/quote')
+            fetch('/api/quote')
                 .then(response => response.json())
                 .then(data => {
                     if (data && data.quote) {
@@ -23,6 +61,7 @@ $code-e;
 $line;
 即可。$line;
 $line;
+成品预览：https://api-omega-opal.vercel.app/api/quote。$line;
 *ps：api在国外，所以你需要用"魔法"才能请求哦！$line;
 $line;
 $head;更多文章编写中...
