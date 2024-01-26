@@ -1,6 +1,6 @@
 function toggleDarkMode() {
   document.body.classList.add('dark-mode');
-  var targetElements = document.querySelectorAll('a,body,h2,p,span,.label,.Card-Box,.screen,.footer,Card-pinglun,hr');
+  var targetElements = document.querySelectorAll('a,body,h2,p,span,.label,.Card-Box,.screen,.footer,.Card-pinglun,hr,.projectCard,.wenzhang');
   for (var i = 0; i < targetElements.length; i++) {
     if (targetElements[i].classList.contains('a')) {
       targetElements[i].classList.remove('a');
@@ -46,12 +46,20 @@ function toggleDarkMode() {
       targetElements[i].classList.remove('hr');
       targetElements[i].classList.add('dark-hr');
     }
+    if (targetElements[i].classList.contains('projectCard')) {
+      targetElements[i].classList.remove('projectCard');
+      targetElements[i].classList.add('projectCard2');
+    }
+    if (targetElements[i].classList.contains('wenzhang')) {
+      targetElements[i].classList.remove('wenzhang');
+      targetElements[i].classList.add('wenzhang2');
+    }
   }
 }
 
 function toggleLightMode() {
   document.body.classList.remove('dark-mode');
-  var targetElements = document.querySelectorAll('.dark-a, .dark-body, .dark-h2, .dark-p, .dark-span, .label2, .Card-Box2, .screen2, .footer2, .Card-pinglun2, .dark-hr');
+  var targetElements = document.querySelectorAll('.dark-a, .dark-body, .dark-h2, .dark-p, .dark-span, .label2, .Card-Box2, .screen2, .footer2, .Card-pinglun2, .dark-hr, .projectCard2, .wenzhang2');
   for (var i = 0; i < targetElements.length; i++) {
     if (targetElements[i].classList.contains('dark-a')) {
       targetElements[i].classList.remove('dark-a');
@@ -96,6 +104,14 @@ function toggleLightMode() {
     if (targetElements[i].classList.contains('dark-hr')) {
       targetElements[i].classList.remove('dark-hr');
       targetElements[i].classList.add('hr');
+    }
+    if (targetElements[i].classList.contains('projectCard2')) {
+      targetElements[i].classList.remove('projectCard2');
+      targetElements[i].classList.add('projectCard');
+    }
+    if (targetElements[i].classList.contains('wenzhang2')) {
+      targetElements[i].classList.remove('wenzhang2');
+      targetElements[i].classList.add('wenzhang');
     }
   }
 }

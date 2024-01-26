@@ -111,15 +111,11 @@
                     .replaceAll("$code-s;", "<br><code>")
                     .replaceAll("$code-e;", "</code>")
                     .replaceAll("$blank4;", "&nbsp;&nbsp;&nbsp;&nbsp;")
-                    .replaceAll("$t1-s;", '<span class="t1">')
-                    .replaceAll("$t1-e;", "</span>")
-                    .replaceAll("$label-s;", '<span class="label">')
-                    .replaceAll("$label-e;", "</span>")
-                    .replaceAll("$img-s;", '<img class="interesting-img type2" src="./img/article/')
+                    .replaceAll("$img-s;", '<img width="800" height="400" src="')
                     .replaceAll("$img-e;", '">')
-                    .replaceAll("$ball;", '<span class="a-ball"></span>')
                     .replaceAll("$link-s;", '<a style="color: black;" href="')
-                    .replaceAll("$link-e;", '">&nbsp;[ 网页链接 ]&nbsp;</a>')
+                    .replaceAll("$link-e1;", '">')
+                    .replaceAll("$link-e2;", '</a>')
             );
         };
         function GetArticle(Name) {

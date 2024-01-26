@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>daiqitao的个人主页</title>
     <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页，Qita Dai">
     <link href="./favicon.ico" rel="shortcut icon">
@@ -16,7 +16,7 @@
         <button class="btn btn-outline-primary" onclick="toggleLightMode()">浅</button>
         <button class="btn btn-outline-primary2" onclick="toggleDarkMode()">深</button>
      </div>
-     <canvas id="canvas"></canvas>
+     <canvas id="StarStage"></canvas>
      <br><br><br>
       <div class="beijingCard-Box" style="background-image: url(https://ooo.0x0.ooo/2023/12/30/OK9yZL.jpg);background-size: cover">
            <img src="https://ooo.0x0.ooo/2023/12/24/OKPtsC.jpg" id="FacerImage" class="FacerImage" style="float:left;">
@@ -89,7 +89,8 @@
         </div>
     </div>
     <hr class="dark-hr" style="margin-top: 20px;">
-    <div>
+<div class="container">
+    <div class="projectCard">
         <div class="projectbox container">
             <img class="projectbox facer" src="https://ooo.0x0.ooo/2023/12/30/OK9l9F.png"><br>
             <div class="projectbox content">
@@ -145,7 +146,7 @@
             </div>
         </div>
     </div>
-<hr class="dark-hr" style="margin-top: 20px;">
+<div class="wenzhang">
   <h2 class="dark-h2">文章</h2>
   <div class="projectbox container" onclick="window.open('./article.html?Name=yiyan','_blank')">
     <img class="projectbox facer" src="https://s1.ax1x.com/2023/07/17/pCorq8s.png"><br>
@@ -154,6 +155,15 @@
         <span class="dark-span projectbox content-text">一个随机文案库，点击查看使用教程。</span><br>
         <span class="dark-span label"> 1 </span>
         <span class="dark-span label">#API</span>
+    </div>
+  </div>
+  <div class="projectbox container" onclick="window.open('./article.html?Name=2sc','_blank')">
+    <img class="projectbox facer" src="https://resources.codingal.com/hs-fs/hubfs/how-to-start-coding-blog/8.png?width=1400&name=8.png"><br>
+    <div class="projectbox content">
+        <span class="dark-span projectbox content-title">手把手教你二次开发Scratch</span><br>
+        <span class="dark-span projectbox content-text">Scratch二次开发教程--01部署环境</span><br>
+        <span class="dark-span label"> 2-01 </span>
+        <span class="dark-span label">#教程</span>
     </div>
   </div>
   <div class="projectbox container" onclick="window.open('./article.html?Name=404','_blank')">
@@ -165,7 +175,8 @@
         <span class="dark-span label"># - </span>
     </div>
   </div>
-<hr class="dark-hr" style="margin-top: 20px;">
+</div>
+</div>
   <div class="Card-pinglun">
         <h2 class="dark-h2">发送评论</h2>
         <input class="form-control me-2" placeholder="用户名"><br><br>
@@ -174,42 +185,42 @@
     <br>
     <hr class="dark-hr" style="width:30%;"><br><br><br>
     <div id="comments-container">
-      <div><strong>admin: </strong><span>通知：由于一些原因，本网站暂时关闭服务端（将从动态页面变为静态），部分功能将无法使用。谢谢理解！</span><button onclick="reply()">回复</button> <span style="color:#c9c9c9">2024-01-14 05:14:19</span><span class="dark-span label">通知</span></div>
+      <div><strong>admin: </strong><span>通知：由于一些原因，本网站暂时关闭服务端（将从动态页面变为静态），部分功能将无法使用。谢谢理解！</span><button onclick="reply()">回复</button> <span style="color:#7e7e7e">2024-01-14 05:14:19</span><span class="dark-span label">通知</span></div>
       <br>
-      <div><strong>daiqitao: </strong><span>一年中最臭的一刻</span><button onclick="reply()">回复</button> <span style="color:#c9c9c9">2024-01-14 05:14:19</span><span class="dark-span label">置顶</span></div>
-      <div><strong>daiqitao: </strong><span>新年快乐！</span><button onclick="reply()">回复</button> <span style="color:#c9c9c9">2024-01-01 00:00:00</span><span class="dark-span label">置顶</span></div>
-      <div><strong>daiqitao: </strong><span>欢迎来到我的主页</span><button onclick="reply()">回复</button> <span style="color:#c9c9c9">2023-12-31 21:14:56</span><span class="dark-span label">置顶</span></div>
+      <div><strong>daiqitao: </strong><span>一年中最臭的一刻</span><button onclick="reply()">回复</button> <span style="color:#7e7e7e">2024-01-14 05:14:19</span><span class="dark-span label">置顶</span></div>
+      <div><strong>daiqitao: </strong><span>新年快乐！</span><button onclick="reply()">回复</button> <span style="color:#7e7e7e">2024-01-01 00:00:00</span><span class="dark-span label">置顶</span></div>
+      <div><strong>daiqitao: </strong><span>欢迎来到我的主页</span><button onclick="reply()">回复</button> <span style="color:#7e7e7e">2023-12-31 21:14:56</span><span class="dark-span label">置顶</span></div>
       <br>
-      <div><strong>傻逼乞讨: </strong><span>傻逼乞讨</span><button onclick="reply()">回复</button> <span style="color:#c9c9c9">2024-01-01 05:30:00</span></div>
-      <div><strong>yangrou: </strong><span>6</span><button onclick="reply()">回复</button> <span style="color:#c9c9c9">2023-12-31 19:14:31</span></div>
+      <div><strong>傻逼乞讨: </strong><span>傻逼乞讨</span><button onclick="reply()">回复</button> <span style="color:#7e7e7e">2024-01-01 05:30:00</span></div>
+      <div><strong>yangrou: </strong><span>6</span><button onclick="reply()">回复</button> <span style="color:#7e7e7e">2023-12-31 19:14:31</span></div>
       <br>
-      <div><strong>test: </strong><span>Not Found</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2023-10-21 13:32:00</span></div>
-      <div class="reply"><strong>admin: </strong><span> <评论已被管理员删除> </span> <span style="color:#c9c9c9">2023-10-21 13:32:01</span></div>
-      <div><strong>test: </strong><span>Not Found</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2023-10-21 13:31:42</span></div>
-      <div class="reply"><strong>admin: </strong><span> <评论已被管理员删除> </span> <span style="color:#c9c9c9">2023-10-21 13:31:43</span></div>
-      <div><strong>test: </strong><span>傻逼</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2023-10-21 13:09:26</span></div>
-      <div class="reply"><strong>admin: </strong><span> <评论已被管理员删除> </span> <span style="color:#c9c9c9">2023-10-21 13:09:27</span></div>
-      <div><strong>test: </strong><span>傻逼</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2023-10-21 13:01:14</span></div>
+      <div><strong>test: </strong><span>Not Found</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2023-10-21 13:32:00</span></div>
+      <div class="reply"><strong>admin: </strong><span> <评论已被管理员删除> </span> <span style="color:#7e7e7e">2023-10-21 13:32:01</span></div>
+      <div><strong>test: </strong><span>Not Found</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2023-10-21 13:31:42</span></div>
+      <div class="reply"><strong>admin: </strong><span> <评论已被管理员删除> </span> <span style="color:#7e7e7e">2023-10-21 13:31:43</span></div>
+      <div><strong>test: </strong><span>傻逼</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2023-10-21 13:09:26</span></div>
+      <div class="reply"><strong>admin: </strong><span> <评论已被管理员删除> </span> <span style="color:#7e7e7e">2023-10-21 13:09:27</span></div>
+      <div><strong>test: </strong><span>傻逼</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2023-10-21 13:01:14</span></div>
       <br>
-      <div><strong>daiqitao: </strong><span>回复评论功能做好啦！回复的评论也支持带上时间了</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2022-04-17 12:28:08</span></div>
-      <div class="reply"><strong>admin: </strong><span>👍</span> <span style="color:#c9c9c9">2022-04-17 12:28:13</span></div>
-      <div class="reply"><strong>微风: </strong><span>考古</span> <span style="color:#c9c9c9">2023-12-15 21:00:28</span></div>
-      <div class="reply"><strong>三幺七: </strong><span>考古</span> <span style="color:#c9c9c9">2023-12-16 11:25:25</span></div>
-      <div class="reply"><strong>GZR: </strong><span>考古+1</span> <span style="color:#c9c9c9">2023-12-16 21:00:28</span></div>
-      <div class="reply"><strong>赵: </strong><span>考古+2</span> <span style="color:#c9c9c9">2023-12-23 10:28:00</span></div>
-      <div class="reply"><strong>Fangin: </strong><span>考古+3</span> <span style="color:#c9c9c9">2023-12-31 19:21:01</span></div>
-      <div class="reply"><strong>傻逼乞讨: </strong><span>傻逼乞讨</span> <span style="color:#c9c9c9">2024-01-01 05:33:42</span></div>
-      <div><strong>daiqitao: </strong><span>1</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2022-04-17 12:27:00</span></div>
-      <div class="reply"><strong>admin: </strong><span>1</span> <span style="color:#c9c9c9">2022-04-17 12:27:56</span></div>
-      <div><strong>test: </strong><span>评论测试</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2022-04-17 12:26:17</span></div>
-      <div class="reply"><strong>test: </strong><span>回复测试</span> <span style="color:#c9c9c9">2022-04-17 12:26:39</span></div>
-      <div><strong>test: </strong><span>评论测试</span><button onclick="reply()">回复</button>  <span style="color:#c9c9c9">2022-04-17 12:22:05</span></div>
+      <div><strong>daiqitao: </strong><span>回复评论功能做好啦！回复的评论也支持带上时间了</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2022-04-17 12:28:08</span></div>
+      <div class="reply"><strong>admin: </strong><span>👍</span> <span style="color:#7e7e7e">2022-04-17 12:28:13</span></div>
+      <div class="reply"><strong>微风: </strong><span>考古</span> <span style="color:#7e7e7e">2023-12-15 21:00:28</span></div>
+      <div class="reply"><strong>三幺七: </strong><span>考古</span> <span style="color:#7e7e7e">2023-12-16 11:25:25</span></div>
+      <div class="reply"><strong>GZR: </strong><span>考古+1</span> <span style="color:#7e7e7e">2023-12-16 21:00:28</span></div>
+      <div class="reply"><strong>赵: </strong><span>考古+2</span> <span style="color:#7e7e7e">2023-12-23 10:28:00</span></div>
+      <div class="reply"><strong>Fangin: </strong><span>考古+3</span> <span style="color:#7e7e7e">2023-12-31 19:21:01</span></div>
+      <div class="reply"><strong>傻逼乞讨: </strong><span>傻逼乞讨</span> <span style="color:#7e7e7e">2024-01-01 05:33:42</span></div>
+      <div><strong>daiqitao: </strong><span>1</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2022-04-17 12:27:00</span></div>
+      <div class="reply"><strong>admin: </strong><span>1</span> <span style="color:#7e7e7e">2022-04-17 12:27:56</span></div>
+      <div><strong>test: </strong><span>评论测试</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2022-04-17 12:26:17</span></div>
+      <div class="reply"><strong>test: </strong><span>回复测试</span> <span style="color:#7e7e7e">2022-04-17 12:26:39</span></div>
+      <div><strong>test: </strong><span>评论测试</span><button onclick="reply()">回复</button>  <span style="color:#7e7e7e">2022-04-17 12:22:05</span></div>
       <div class="reply"><strong>test: </strong><span>回复测试</span></div>
       <br>
-      <div><strong>test: </strong><span>测试</span>  <span style="color:#c9c9c9">2022-04-16 14:11:39</span></div>
-      <div><strong>test: </strong><span>时间测试</span>  <span style="color:#c9c9c9">2-0-2-2-0-4-1-6-1:4:0:7:5:9</span></div>
-      <div><strong>test: </strong><span>时间测试</span>  <span style="color:#c9c9c9">20220416140323</span></div>
-      <div><strong>test: </strong><span>时间测试</span>  <span style="color:#c9c9c9">20220416140309</span></div>
+      <div><strong>test: </strong><span>测试</span>  <span style="color:#7e7e7e">2022-04-16 14:11:39</span></div>
+      <div><strong>test: </strong><span>时间测试</span>  <span style="color:#7e7e7e">2-0-2-2-0-4-1-6-1:4:0:7:5:9</span></div>
+      <div><strong>test: </strong><span>时间测试</span>  <span style="color:#7e7e7e">20220416140323</span></div>
+      <div><strong>test: </strong><span>时间测试</span>  <span style="color:#7e7e7e">20220416140309</span></div>
       <br>
       <div><strong>daiqitao: </strong><span>欢迎来到我的个人主页！</span></div>
       <div><strong>daiqitao: </strong><span>评论测试</span></div>
@@ -247,88 +258,108 @@
               currentPage.style.display = "block";
           }
 
-          const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-
-    // 设置画布大小
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    // 定义星星对象
-    class Star {
-        constructor(x, y, radius, color) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-            this.color = color;
+(()=>{
+    var e = {
+        193: e=>{
+            e.exports = function(e, t) {
+                window[t] = e
+            }
         }
-
-        draw() {
-            ctx.save();
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.shadowColor = this.color;
-            ctx.shadowBlur = 10;
-            ctx.fill();
-            ctx.closePath();
-            ctx.restore();
+        ,
+        28: ()=>{
+            window.ReqFrame = window.requestAnimationFrame;
+            var e, t, o, n, i = document.getElementById("StarStage"), r = i.getContext("2d"), d = 2e3, a = "0." + Math.floor(10 * Math.random()) + 1, w = 2 * i.width, h = [];
+            function s() {
+                for (e = i.width / 2,
+                t = i.height / 2,
+                h = [],
+                n = 0; n < d; n++)
+                    o = {
+                        x: Math.random() * i.width,
+                        y: Math.random() * i.height,
+                        z: Math.random() * i.width,
+                        o: "0." + Math.floor(99 * Math.random()) + 1
+                    },
+                    h.push(o)
+            }
+            s(),
+            function u() {
+                ReqFrame(u),
+                function() {
+                    for (n = 0; n < d; n++)
+                        (o = h[n]).z--,
+                        o.z <= 0 && (o.z = i.width)
+                }(),
+                function() {
+                    var u, m, f;
+                    for (i.width == window.innerWidth && i.width == window.innerWidth || (i.width = window.innerWidth,
+                    i.height = window.innerHeight,
+                    s()),
+                    r.clearRect(0, 0, i.width, i.height),
+                    r.fillStyle = "rgba(209, 255, 255, " + a + ")",
+                    n = 0; n < d; n++)
+                        u = ((o = h[n]).x - e) * (w / o.z),
+                        u += e,
+                        m = (o.y - t) * (w / o.z),
+                        m += t,
+                        f = w / o.z * 1,
+                        r.fillRect(u, m, f, f),
+                        r.fillStyle = "rgba(209, 255, 255, " + o.o + ")"
+                }()
+            }()
+        }
+        ,
+        659: (e,t,o)=>{
+            const n = o(193);
+            var i = {
+                MouseX: 0,
+                MouseY: 0,
+                MouseDown: !1
+            };
+            window.addEventListener("mousemove", (e=>{
+                i.MouseX = e.clientX,
+                i.MouseY = e.clientY
+            }
+            )),
+            window.addEventListener("mousedown", (()=>{
+                i.MouseDown = !0
+            }
+            )),
+            window.addEventListener("mouseup", (()=>{
+                i.MouseDown = !1
+            }
+            )),
+            n(i, "MouseInfo")
+        }
+        ,
+        322: (e,t,o)=>{
+            const n = o(193)
+              , i = document.getElementById("PageContent");
+            var r = 0;
+            window.addEventListener("mousemove", (e=>{
+                MouseInfo.MouseDown && (r -= .05 * e.movementX,
+                i.style.transform = `rotateX(-20deg) rotateY(${r}deg)`)
+            }
+            )),
+            n(r, "CurrentY")
         }
     }
-
-    // 创建随机颜色
-    function randomColor() {
-        const colors = ['#fff'];
-        return colors[Math.floor(Math.random() * colors.length)];
+      , t = {};
+    function o(n) {
+        var i = t[n];
+        if (void 0 !== i)
+            return i.exports;
+        var r = t[n] = {
+            exports: {}
+        };
+        return e[n](r, r.exports, o),
+        r.exports
     }
-
-    // 创建星星数组
-    const stars = [];
-    for (let i = 0; i < 100; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const radius = Math.random() * 3;
-        const color = randomColor();
-        stars.push(new Star(x, y, radius, color));
-    }
-
-    // 绘制动画
-    function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        for (let i = 0; i < stars.length; i++) {
-            stars[i].draw();
-        }
-
-        requestAnimationFrame(draw);
-    }
-
-    draw();
-
-    function displayTime() {
-      var now = new Date();
-      var year = now.getFullYear();
-      var month = (now.getMonth() + 1).toString().padStart(2, '0');
-      var day = now.getDate().toString().padStart(2, '0');
-      var hours = now.getHours().toString().padStart(2, '0');
-      var minutes = now.getMinutes().toString().padStart(2, '0');
-      var seconds = now.getSeconds().toString().padStart(2, '0');
-      
-      var currentTime = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
-      document.getElementById('clock').textContent = currentTime;
-    }
-
-    window.onload = function() {
-      setInterval(displayTime, 1000); // 每秒钟更新一次时间
-    };
-
-    document.addEventListener("DOMContentLoaded", function() {
-    const rotateElement = document.getElementById('FacerImage');
-
-    rotateElement.addEventListener('click', function() {
-      rotateElement.classList.add('rotate');
-    });
-  });
+    o(28),
+    o(659),
+    o(322)
+}
+)();
         </script>
 </body>
 
