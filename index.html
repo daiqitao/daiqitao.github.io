@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>daiqitao的个人主页</title>
-    <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页，Qita Dai">
+    <meta name="keywords" content="DAI，DAIQI，DAIQITAO，TAO，DAIQITAO的主页，个人主页，主页">
     <link href="./favicon.ico" rel="shortcut icon">
     <link type="text/css" rel="stylesheet" href="/main.css"/>
     <script src="/darkMode.js"></script>
@@ -19,7 +19,7 @@
      <canvas id="StarStage"></canvas>
      <br><br><br>
       <div class="beijingCard-Box" style="background-image: url(https://ooo.0x0.ooo/2023/12/30/OK9yZL.jpg);background-size: cover">
-           <img src="https://ooo.0x0.ooo/2023/12/24/OKPtsC.jpg" id="FacerImage" class="FacerImage" style="float:left;">
+           <img src="https://ooo.0x0.ooo/2024/02/01/OvRZKN.jpg" id="FacerImage" class="FacerImage" style="float:left;">
            <div class="h1">
             <h1>
                 <span class="dark-span">d</span>
@@ -76,7 +76,7 @@
                 <a class="dark-a" href="https://codingclip.com/user/1564">别针社区</a>
                 <a class="dark-a" href="https://www.xiaohongshu.com/user/profile/631d7090000000002302712b">小红书</a><br>
                 <a class="dark-a" href="https://www.kuaishou.com/profile/3x944cy9wxuaxcq">快手</a>
-                <a class="dark-a" href="https://b23.tv/W721KTh">哔哩哔哩</a>
+                <a class="dark-a" href="https://space.bilibili.com/1872994261">哔哩哔哩</a>
                 <a class="dark-a" href="https://shequ.codemao.cn/user/858933478">编程猫</a>
                 <a class="dark-a" href="https://github.com/daiqitao">Github</a>
                 <a class="dark-a" href="https://activity.kugou.com/share/v-c7b4da67/index.html?id=4854aa3ee90bc78067e06fd34f208cb1">酷狗音乐</a>
@@ -91,7 +91,7 @@
     <hr class="dark-hr" style="margin-top: 20px;">
 <div class="container">
     <div class="projectCard">
-        <div class="projectbox container">
+        <div class="projectbox container" onclick="window.open('https://galaxycodingstudio.github.io/','_blank')">
             <img class="projectbox facer" src="https://ooo.0x0.ooo/2023/12/30/OK9l9F.png"><br>
             <div class="projectbox content">
                 <span class="dark-span projectbox content-title">GalaxyCodingStudio</span><br>
@@ -100,7 +100,7 @@
                 <span class="dark-span label">创意开发</span>
             </div>
         </div>
-        <div class="projectbox container">
+        <div class="projectbox container" onclick="window.open('https://github.com/daiqitao/futureUI','_blank')">
             <img class="projectbox facer" src="https://s1.ax1x.com/2023/08/03/pPiwjPg.jpg"><br>
             <div class="projectbox content">
                 <span class="dark-span projectbox content-title">future UI</span><br>
@@ -109,7 +109,7 @@
                 <span class="dark-span label">Web应用支持库</span>
             </div>
         </div>
-        <div class="projectbox container">
+        <div class="projectbox container" onclick="window.open('https://www.40code.com/#page=work&id=4703','_blank')">
             <img class="projectbox facer" src="https://ooo.0x0.ooo/2023/12/31/OKj4Gg.png"><br>
             <div class="projectbox content">
                 <span class="dark-span projectbox content-title">「涂鸦跑酷v3.0」</span><br>
@@ -257,6 +257,29 @@
               var currentPage = document.getElementById(pageId);
               currentPage.style.display = "block";
           }
+
+    function displayTime() {
+      var now = new Date();
+      var year = now.getFullYear();
+      var month = (now.getMonth() + 1).toString().padStart(2, '0');
+      var day = now.getDate().toString().padStart(2, '0');
+      var hours = now.getHours().toString().padStart(2, '0');
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var seconds = now.getSeconds().toString().padStart(2, '0');
+      
+      var currentTime = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+      document.getElementById('clock').textContent = currentTime;
+    }
+    window.onload = function() {
+      setInterval(displayTime, 1000); // 每秒钟更新一次时间
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const rotateElement = document.getElementById('FacerImage');
+    rotateElement.addEventListener('click', function() {
+      rotateElement.classList.add('rotate');
+    });
+  });
 
 (()=>{
     var e = {
